@@ -2,7 +2,6 @@ public function login_button()
 {
 ob_start();
 get_template_part('partials/shortcodes/login', 'button');
-
 $content = ob_get_contents();
 ob_end_clean();
 return $content;
@@ -39,14 +38,6 @@ return $content;
 
 
 
-public function step_two()
-{
-ob_start();
-get_template_part('partials/shortcodes/step', 'two');
-$content = ob_get_contents();
-ob_end_clean();
-return $content;
-}
 
 public function step_three()
 {
