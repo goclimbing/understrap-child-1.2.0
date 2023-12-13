@@ -25,7 +25,7 @@ add_filter('login_headertext', 'FORTYTWOTheme\login_title');
 function login_logo()
 {
     $logo = get_field('logo', 'options');
-    $logo = $logo ? $logo['url'] : g10_theme_img('I-10-RV-RGB.svg');
+    // $logo = $logo ? $logo['url'] : fortytwo_theme_img('I-10-RV-RGB.svg');
 ?>
     <style type="text/css">
         #login h1 a,

@@ -5,3 +5,10 @@
 
 $sushi-dark-blue: #1f4b81; // Thats a sample how you could change a BootStrap variable.
 $primary: $sushi-dark-blue;  // Once we've changed the value, we'll also make it the primary brand color.
+
+$sushi-light-blue: #6493b7;
+$secondary: $sushi-light-blue;
+
+
+$dropdown-link-hover-bg: $sushi-light-blue;
+$dropdown-link-hover-color: #ffffff;

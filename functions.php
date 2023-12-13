@@ -97,17 +97,6 @@ add_action('customize_controls_enqueue_scripts', 'understrap_child_customize_con
 
 //include get_template_directory() . '/inc/settings.php';
 
-
-
-
-
-
-
-
-
-
-
-
 function cptui_register_my_cpts()
 {
 
@@ -318,8 +307,15 @@ require_once FORTYTWO_THEME_PATH . 'includes/auth.php';
 
 //require_once FORTYTWO_THEME_PATH . 'libs/accounts.php';
 require_once FORTYTWO_THEME_PATH . 'libs/misc.php';
-
 require_once FORTYTWO_THEME_PATH . 'classes/class.recurly.php';
 
 global $recurly;
 $recurly = new Recurly();
+
+/**
+ * Custom ACF Blocks
+ */
+//require get_template_directory() . '-child/includes/acf-blocks.php';
+//require get_stylesheet_directory_uri() . '/includes/acf-blocks.php';
+
+require_once FORTYTWO_THEME_PATH . 'includes/acf-blocks.php';
