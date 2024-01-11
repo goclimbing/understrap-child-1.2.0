@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Right Sidebar Layout
+ * Template Name: Home Page Right Sidebar Layout
  *
  * This template can be used to override the default template and sidebar setup
  *
@@ -14,6 +14,9 @@ defined('ABSPATH') || exit;
 get_header();
 $container = get_theme_mod('understrap_container_type');
 ?>
+
+<?php echo do_shortcode("[smartslider3 slider=\"2\"]"); ?>
+
 
 <div class="wrapper" id="page-wrapper">
 
