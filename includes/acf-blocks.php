@@ -5,8 +5,6 @@ function rv_acf_init()
     if (function_exists('acf_register_block')) {
         $themeKeywords = array('c1', 'ln');
         $customBlocks = array(
-            array('portfolio', 'Web Portfolio', 'Examples of Past Projects', 'shield', array('logo', 'grid')),
-            array('features', 'Features Pages Block', 'displays features data', 'shield', array('logo', 'grid')),
             array('two-block-display', 'Two Block Display', 'Two Block Display on Wide Screen', 'shield', array('logo', 'grid')),
         );
         foreach ($customBlocks as $block) {
