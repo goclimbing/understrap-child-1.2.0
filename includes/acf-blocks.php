@@ -6,6 +6,7 @@ function rv_acf_init()
         $themeKeywords = array('c1', 'ln');
         $customBlocks = array(
             array('two-block-display', 'Two Block Display', 'Two Block Display on Wide Screen', 'shield', array('logo', 'grid')),
+            array('features', 'Features Block', 'Custom Features Area', 'shield', array('logo', 'grid')),
         );
         foreach ($customBlocks as $block) {
             acf_register_block(
