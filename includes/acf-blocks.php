@@ -6,6 +6,8 @@ function rv_acf_init()
         $themeKeywords = array('c1', 'ln');
         $customBlocks = array(
             array('two-block-display', 'Two Block Display', 'Two Block Display on Wide Screen', 'shield', array('logo', 'grid')),
+            array('sketchfab', 'Sketchfab IDs', 'Sketchfab ID list', 'shield', array('logo', 'grid')),
+            array('iframe', 'iFrame Block', 'Uses FULL URL as source', 'shield', array('logo', 'grid')),
             array('features', 'Features Block', 'Custom Features Area', 'shield', array('logo', 'grid')),
         );
         foreach ($customBlocks as $block) {

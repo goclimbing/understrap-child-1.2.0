@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Home Page Right Sidebar Layout
+ * Template Name: Sushi Fest Right Sidebar Layout
  *
  * This template can be used to override the default template and sidebar setup
  *
@@ -39,6 +39,17 @@ $container = get_theme_mod('understrap_container_type');
                             comments_template();
                         }
                     }
+                    ?>
+
+                    <?php
+                    $args = array('post_type' => 'Photographs', 'posts_per_page' => 10);
+                    $loop = new WP_Query($args);
+                    while ($loop->have_posts()) : $loop->the_post();
+                        the_title();
+                        echo '<div class="entry-content">';
+                        the_content();
+                        echo '</div>';
+                    endwhile;
                     ?>
 
                 </main>
