@@ -9,6 +9,8 @@ function rv_acf_init()
             array('sketchfab', 'Sketchfab IDs', 'Sketchfab ID list', 'shield', array('logo', 'grid')),
             array('iframe', 'iFrame Block', 'Uses FULL URL as source', 'shield', array('logo', 'grid')),
             array('features', 'Features Block', 'Custom Features Area', 'shield', array('logo', 'grid')),
+
+            array('fish', 'Fish Top-10', 'Top 10 good/bad sushi fish', '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z" /><path d="M19 13H5v-2h14v2z" /></svg>', array('logo', 'grid')),
         );
         foreach ($customBlocks as $block) {
             acf_register_block(

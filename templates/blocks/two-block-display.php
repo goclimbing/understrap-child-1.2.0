@@ -429,7 +429,7 @@ $blocks = get_field('blocks');
     <div class="row">
         <?php foreach ($blocks as $block) : ?>
             <div class="col-12 col-lg-6 mb-3">
-                <div class="card mb-4 box-shadow h-100 border-secondary border border-2 bg-light rounded-3">
+                <div class="card mb-3 box-shadow h-100 border-secondary border border-2 bg-light rounded-3">
                     <div class="card-body mb-0 pb-0">
                         <div class="row ps-3 pb-2">
                             <div class="w-25">
@@ -459,7 +459,7 @@ $blocks = get_field('blocks');
 
                             </p>
                         </div>
-                        <div class="row mb-3  justify-content-center">
+                        <div class="row mb-0  justify-content-center">
                             <a href="<?php echo $block['cta_link']; ?>" role="button" class="w-100 btn btn-sm btn-secondary text-white" type="submit" style=" max-width:175px;">
                                 <?php echo $block['cta_text']; ?>
                             </a>

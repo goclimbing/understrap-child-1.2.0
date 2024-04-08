@@ -27,42 +27,29 @@ $cta2_button_text = get_field('cta2_button_text');
 $cta2_button_url = get_field('cta2_button_url');
 ?>
 
-<style>
-    .list li {
-        background-size: 25px;
-        background-position: left top;
-        list-style-type: none;
-    }
 
-    .features-list {
-        display: block;
-    }
 
-    .features-column {
-        display: block;
-        width: 50%;
-        float: left;
-        padding-left: 10px;
-    }
-</style>
+
+
+
 
 <div class="container  overflow-hidden">
-    <div class="row">
+    <div class="row mb-3">
         <div class="col-md-6 col-sm-12 col-xs-12 vh-center">
-            <h1>
-                <?php echo $intro_header; ?>
-            </h1>
             <h2>
-                <?php echo $intro_sub_header; ?>
+                <?php echo $intro_header; ?>
             </h2>
+            <h3>
+                <?php echo $intro_sub_header; ?>
+            </h3>
             <p>
                 <?php echo $intro_text; ?>
             </p>
-            <h2><?php echo $sub_intro_header; ?></h2>
+            <h3><?php echo $sub_intro_header; ?></h3>
             <p><?php echo $sub_intro_text; ?></p>
 
         </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 vh-center">
+        <div class="col-md-6 col-sm-12 col-xs-12 vh-center card p-5 box-shadow h-100 border-primary border border-1 bg-light rounded-3">
             <img src="<?php echo $hero_image; ?>" class="img-fluid">
         </div>
     </div>
@@ -73,52 +60,44 @@ $cta2_button_url = get_field('cta2_button_url');
             </h2>
         </div>
     </div>
+    <div class="container-fluid">
+        <div class="row">
+            <?php foreach ($features_text as $block) : ?>
+                <div class="col-12 col-lg-6 mb-3">
+                    <div class="card mb-3 box-shadow h-100 border-secondary border border-2 bg-light rounded-3">
+                        <div class="card-body mb-0 pb-0">
+                            <div class="row ps-3 pb-2">
+                                <div class="w-25">
+                                </div>
+                                <div class="w-75">
+                                    <h3 class="  text-end mb-0 text-primary">
+                                        <?php echo $block['title']; ?>
+                                    </h3>
+                                </div>
+                            </div>
 
-    <div class="row list">
-        <div class="features-list">
-            <div class="features-column">
-                <?php
-                //$ttl_features = sizeof($features_text);
-                $ttl_features = 2;
-                $half = ceil($ttl_features / 2);
-                $num = 0;
-                foreach ($features_text as $feature_text) :
+                            <div class="row text-center m-1">
+                                <div>
 
-                    $html = '<div class=feature-li><li style="visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0.18s, opacity 0.5s ease-in-out 0.18s; transition: transform 0.5s ease-in-out 0.18s, opacity 0.5s ease-in-out 0.18s; ">';
-                    $html .= '<strong>' . $feature_text['title'] . '</strong>';
-                    $html .= "<p>" . $feature_text['text'] . "</p>";
-                    $html .= '</li></div>';
-                    $num++;
-                    if ($num == $half) {
-                        $html .= '</div><div class="features-column">';
-                    }
-                    echo $html;
-                endforeach;
-                ?>
+                                </div>
+                            </div>
+                            <div class="row text-center text-dark mx-0 mb-0 pb-0">
+                                <p>
+                                    <?php echo $block['text']; ?>
 
-            </div>
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            <?php endforeach; ?>
+
         </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-6 col-sm-12 col-xs-12 vh-center ">
-            <div class="row  justify-content-center">
-                <h2><?php echo $cta1_title; ?></h2>
-                <a href="<?php echo $cta1_button_url; ?>">
-                    <button type="button" class="btn btn-secondary understrap-read-more-link" data-toggle="modal" data-target="#video_model_first" data-sr-id="24" style=" visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0.11s, opacity 0.5s ease-in-out 0.11s; transition: transform 0.5s ease-in-out 0.11s, opacity 0.5s ease-in-out 0.11s; ">
-                        <?php echo $cta1_button_text; ?>
-                    </button>
-                </a>
-            </div>
-        </div>
 
-        <div class="col-md-6 col-sm-12 col-xs-12 vh-center">
-            <h2><?php echo $cta2_title; ?></h2>
-            <a href="<?php echo $cta2_button_url; ?>">
-                <button type="button" class="btn btn-secondary understrap-read-more-link" data-toggle="modal" data-target="#video_model_first" data-sr-id="24" style=" visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0.11s, opacity 0.5s ease-in-out 0.11s; transition: transform 0.5s ease-in-out 0.11s, opacity 0.5s ease-in-out 0.11s; ">
-                    <?php echo $cta2_button_text; ?>
-                </button>
-            </a>
-        </div>
     </div>
 
     <div class="row">
@@ -132,30 +111,47 @@ $cta2_button_url = get_field('cta2_button_url');
         </div>
     </div>
 
-    <div class="row list gy-5 g-2">
-        <div class="features-list">
-            <div class="container overflow-hidden">
-                <div class="features-column row  g-2 p-3">
-                    <?php
-                    foreach ($how_it_works_list as $how_it_works_data) :
-                        $html = '<div class="feature-li p-3 border bg-light"><li>';
-                        $html .= '<strong>' . $how_it_works_data['title'] . '</strong>';
-                        $html .= "<p>" . $how_it_works_data['text'] . "</p>";
-                        $html .= '</li></div>';
-                        echo $html;
-                    endforeach;
-                    ?>
+
+    <div class="container overflow-hidden my-3">
+        <div class="row">
+            <div class="col m-0 p-0 col-md-4">
+                <?php
+                foreach ($how_it_works_list as $how_it_works_data) :
+                    $html = '<div class="row p-3 border bg-light"><li>';
+                    $html .= '<strong>' . $how_it_works_data['title'] . '</strong>';
+                    $html .= "<p>" . $how_it_works_data['text'] . "</p>";
+                    $html .= '</li></div>';
+                    echo $html;
+                endforeach;
+                ?>
+                <div class="col  vh-center  justify-content-center text-center mt-3 p-2">
+                    <div class="row  justify-content-center">
+                        <h2><?php echo $cta1_title; ?></h2>
+                        <a href="<?php echo $cta1_button_url; ?>">
+                            <button type="button" class="btn btn-secondary understrap-read-more-link text-white" data-toggle="modal" data-target="#video_model_first" data-sr-id="24" style=" visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0.11s, opacity 0.5s ease-in-out 0.11s; transition: transform 0.5s ease-in-out 0.11s, opacity 0.5s ease-in-out 0.11s; ">
+                                <?php echo $cta1_button_text; ?>
+                            </button>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="features-column row gy-5 g-2 p-3">
-                    <img src="<?php echo $how_it_works_image; ?>" class="img-fluid">
+                <div class="col vh-center mt-3 justify-content-center text-center p-2">
+                    <h2><?php echo $cta2_title; ?></h2>
+                    <a href="<?php echo $cta2_button_url; ?>">
+                        <button type="button" class="btn btn-secondary understrap-read-more-link text-white" data-toggle="modal" data-target="#video_model_first" data-sr-id="24" style=" visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0.11s, opacity 0.5s ease-in-out 0.11s; transition: transform 0.5s ease-in-out 0.11s, opacity 0.5s ease-in-out 0.11s; ">
+                            <?php echo $cta2_button_text; ?>
+                        </button>
+                    </a>
                 </div>
+            </div>
+
+            <div class="col gy-0 g-0 p-0 col-md-8">
+                <img src="<?php echo $how_it_works_image; ?>" class="img-fluid">
             </div>
         </div>
     </div>
 
-
-    <h2>Why Choose ACF+GB?</h2>
+    <h2>Why Choose ACF + Gutenberg + BS5?</h2>
     <p><?php echo $why_choose_reveel; ?></p>
 
 </div>
